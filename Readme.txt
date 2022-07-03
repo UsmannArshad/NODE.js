@@ -46,3 +46,14 @@ module.exports.(name that will be used in other files)=print
 In file where u want to use:
 var a=require('./module.js')
 a.name()
+
+Module Wrapper Function:
+Our code does not run directy rather it is wrapp
+
+=>Built-in Modules:
+1)Path:
+The path module provides utilities for working with file and directory paths. It can be accessed using:
+const path=require('path')
+2)OS:
+The os module provides operating system-related utility methods and properties. It can be accessed using:
+const os=require('os')
