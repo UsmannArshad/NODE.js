@@ -57,3 +57,10 @@ const path=require('path')
 2)OS:
 The os module provides operating system-related utility methods and properties. It can be accessed using:
 const os=require('os')
+3)FS:
+The fs module enables interacting with the file system
+const fs=require('fs')
+There is a pair of functions synchronous and asynchoronous.U should prefer asynchronous.
+4)Events:
+const EventEmitter=require('events')=>EventEmitter is the class we ll make its object to use
+const Emitter=new EventEmitter();
