@@ -64,3 +64,12 @@ There is a pair of functions synchronous and asynchoronous.U should prefer async
 4)Events:
 const EventEmitter=require('events')=>EventEmitter is the class we ll make its object to use
 const Emitter=new EventEmitter();
+
+=>Creating Server:
+use http module
+const http=require('http')
+http.createServer((req,res)=>{
+    res.write("respose")
+    res.end
+}).listen(3000)
+U can view this on local host 3000 on web browser
