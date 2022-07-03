@@ -1,0 +1,35 @@
+Open command run console.log("anything").It will say console.log is not a command
+It means it does not recognize js but if we run node command and then write console.log("Anything")
+then it will work it means node is a transaltor that translates js code in machine language
+Node.js:is an oen source and cross platform runtime enviroment for executing js code outside the browser'
+It is used for backend services like creating API(Appication programming interface)=>Services that power out client Apps
+It is recommended for highly scalable data intensive and real time apps.
+JavaScript everywhere
+There are many oen source libraries that can use so that u dont have to build from scratch.
+
+=>Architecture:
+Before node,we use JS only to build app that run on browser.So every browser mush have JS engine that take our Js code and convert it into machine language.
+Microsoft edge=>Chakra
+Firefox=>Spider Monkey
+Chrome=>v8(Open console of chrome and write JS it will convert ur JS into machine language)
+Ryan Dhal in 2009 comes up with the idea of running JS code outside browser by taking v8 engine and embed it into C++ program and called it Node.It has additional modules like
+fs and http that are not possible in browser.
+
+=>Non Blocking vs Blocking
+Node is a non-blocking and asynchoronous.
+Imagine u go to the resturant waiter will take ur order give it to chef and start serving other tables.When ur meal is ready waiter will serve u.He will not wait for
+chef to make ur food then serve other tables after serving u.(It is non-blocking and asynchronous)
+
+Key pt:Node is not multi-thread it is single thread
+When we recieve a request on server a thread is allocated to it.It will run the query,sometime it takes time to do db tasks then we'll see how blocking vs non-blocking works:
+
+1)Blocking and sychronous:(ASP.net)
+We receive a request from the server a thread is allocated to it.It will take some time to fetch data from db meanwhile this thread will be blocked waiting 4 response
+from db.If a new request is received then new thread will be allocated.Now u can imagine if more request came.We ll run out of threads at one time.So we have to 
+increase the no of threads.Shortly,We r not using our threads effeciently.
+2)Non-blocking and asynchronous:(Node)
+We receive a request from the server a thread will handle this request.If it has to go to db.It willl not w8 for the db to get data.Rather it will handle some other request
+and When DB will return some response.It will put the msg in event queue and then the thread will execute this event.Node is coontinously monitoring this event queue
+
+=>Node is ideal for Data Intensive(I/O) apps
+=>not ideal for CPU-intensive apps like games as there are lot of calcualtions have to be done by CPU and small operation for file system and networks.
