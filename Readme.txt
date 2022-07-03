@@ -33,3 +33,16 @@ and When DB will return some response.It will put the msg in event queue and the
 
 =>Node is ideal for Data Intensive(I/O) apps
 =>not ideal for CPU-intensive apps like games as there are lot of calcualtions have to be done by CPU and small operation for file system and networks.
+
+=>As we know everything stores in global object.It has a drawback that we have multiples
+files if we have same names of some functions than it will over-write it.
+To tackle that we Use Modularity.
+
+Modules:
+Every js file will be a module.Every module have its own scope.So function with same name will not overwrite each other
+Every module is private we cant access its data memebers or functions outside the file until we expliciitly export it.
+export what u want to use in other files like:
+module.exports.(name that will be used in other files)=print
+In file where u want to use:
+var a=require('./module.js')
+a.name()
