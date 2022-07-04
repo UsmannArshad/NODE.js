@@ -83,3 +83,33 @@ else
 {
     res.writeHead(404)
 }
+
+=>Express:
+Express.js is a free and open-source web application framework for Node.js.It is
+used for designing and building web application quickly and easily.
+Why u should use Express.js?
+Without express u have to write ur own code for routing which is time consuming 
+and tedious task.Express.js offers simplicity,flexibility,efficiency and scalability
+to the programmers.It also increases performance.
+
+npm init  and then press enter until u get package.json file
+npm install express
+const express=require('express')
+const App=express()
+App.listen(3000,()=>{console.log("Starting server at 3000")})
+App.get('/',(req,res)=>{
+    res.send('Hello World')
+})
+Now we dont have to write wheter we want JSON,HTML etc we can send whatever data we want
+like res.send('<h1>gg</h1>')
+like res.send({id:1,name:'usman'})
+
+Problem:We have to keep killing server whenever we make a change cuz our code is catched
+by the server.To resolve this we will use nodemon
+
+=>Nodemon:
+nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script.
+
+
+
