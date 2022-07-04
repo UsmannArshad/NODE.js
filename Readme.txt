@@ -111,5 +111,11 @@ by the server.To resolve this we will use nodemon
 nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script.
 
+=>Params and query:
 
+If we want to go to some route dynamically like /:id then we can get the value of id by
+res.params.id(must be the same name as declared in route)
 
+If we want to run a query string like /?fname=usman&lname=arshad
+then we can get values like
+firstname=res.query.fname(this name must be the same as in the url)

@@ -10,3 +10,15 @@ App.get('/html',(req,res)=>{
 App.get('/json',(req,res)=>{
     res.send({name:'Usman',id:1})
 })
+//query string
+App.get('/data/',(req,res)=>{
+    let firstname=req.query.fname
+    let lastname=req.query.lname
+    res.send({Firstname:firstname,Lastname:lastname})
+})
+//params
+App.get('/:id',(req,res)=>{
+    let ID=req.params.id
+    res.send(`Id is ${ID}`)
+})
+//query string
