@@ -73,3 +73,13 @@ http.createServer((req,res)=>{
     res.end
 }).listen(3000)
 U can view this on local host 3000 on web browser
+
+=>Routes:
+if(req.url==="/")
+{
+    res.write("home")
+}
+else
+{
+    res.writeHead(404)
+}
