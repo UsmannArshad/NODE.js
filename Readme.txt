@@ -119,3 +119,14 @@ res.params.id(must be the same name as declared in route)
 If we want to run a query string like /?fname=usman&lname=arshad
 then we can get values like
 firstname=res.query.fname(this name must be the same as in the url)
+
+=>MiddleWares:
+Problem:For example,when we deal with some external html file that have link to external css like link href="./style.css" it will think of it as a route and style will be not applied:
+U can see in networks that it deals style.css as a oute and give 404 error
+Solution:To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
+App.use(express.static(__dirname+'/public'))
+now all files in public folder is used as static file no more route and we ca access them in browser 
+by wring localhost:3000/style.css for example we can change it to virtual path like
+App.use('/static or any name'express.static(__dirname+'/public'))
+now u can access files in browser like:
+localhost:3000/static/style.css or /img/cat.jpg etc
